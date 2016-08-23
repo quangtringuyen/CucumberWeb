@@ -24,3 +24,18 @@ Scenario: checking pre-condition, action and results
 	Then user is on Your Account page
 	And titel of page is "Your Account"
 	But My Account button is not present
+	
+	Scenario Outline: login fail - possible combination
+		Given user is on Application landing page
+		When user clicks on My Account button
+		Then user is navigated to Login Page
+		When user enters "<Username>" in username field
+		And user enters "<Password>" in password field
+		And user clicks Login button
+		Then user gets login failed error message
+		
+		Examples:
+		|	Username				|	Password			|
+		|	wrongusername		|	thienan1306		|
+		|	tri.nguyen			|	wrongpassword	|
+		|	wrongusername		|	wrongpassword	|
