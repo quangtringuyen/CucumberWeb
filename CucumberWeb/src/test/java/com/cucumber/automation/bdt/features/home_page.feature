@@ -12,12 +12,10 @@ Background: Flow till home page
 	Then user is on Your Account page
 	When user clicks on Home menu
 	Then user is on Online Store home page
-	
 
 Scenario: Home Page default content
 Then user gets Product Category section
  	And username is also displayed on right corner
-
 
 Scenario: Product Category Section
 When user forcuses on Product Category Section
