@@ -5,8 +5,9 @@ import cucumber.junit.Cucumber;
 
 @RunWith (Cucumber.class)
 @Cucumber.Options(
-        feature={"classpath:features"};
-        plugin = {"pretty", "html:target/cucumber-html-report"}
+        feature="classpath:features",
+        plugin = {"pretty", "html:target/cucumber-html-report"},
+        glue="classpath:stepDefinitions"
 )
 
 public class RunCukeTest
